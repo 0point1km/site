@@ -89,6 +89,36 @@ table {
   padding-right: 50px;
 }
 
+.collapsible {
+  font-family: "Montserrat", Arial, sans-serif;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #7A8B93;
+  color: #ADB6BA;
+  width: 100%;
+  border:none;
+  text-align: left;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.collapsible:after {
+    content: '\002B'; /* Unicode character for "plus" sign (+) */
+    color: inherit;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
+.collapsible:hover {
+  text-decoration: none;
+  color: #0A1128;
+}
+
 img {
   display: block;
   margin-top: 40px;
