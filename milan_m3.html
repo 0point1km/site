@@ -1,31 +1,61 @@
-
 <html>
 <head>
   <title>0.1km</title>
   <meta name="description" content="an art intervention into normative online adspace">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/0.1km_banner_logo.png" />
+    <meta property="og:site_name" content="0point1km.com" />
+    <meta property="og:title" content="0.1km" />
+    <meta property="og:description" content="0.1km" />
+    <meta property="og:url" content="https://www.0point1km.com" />
+    <meta property="og:app_id" content="476218462788425" />
+    <meta property="fb:app_id" content="476218462788425" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/ico" href="images/0.1km_ico.png"/>
     <link rel="apple-touch-icon" href="images/ico_ios.png"/>
-    <meta property="fb:admins" content="10102213157768125"/>
+
+<!-- cookie consent banner -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#edeff5",
+          "text": "#838391"
+        },
+        "button": {
+          "background": "#4b81e8"
+        }
+      },
+      "theme": "edgeless",
+      "type": "opt-out"
+    })});
+    </script>
+
 </head>
 
 <body>
 
+<!-- facebook comment script -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=476218462788425&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
+<!-- headline -->
   <header> </header>
 
-
+<!-- navigation bar -->
   <nav id="nav" role="navigation">
     <a href="#nav" title="Show navigation">⃝</a>
     <a href="#" title="Hide navigation">●</a>
@@ -36,15 +66,17 @@
     </ul>
   </nav>
 
-
+<!-- image -->
 <img class="0point1km_milan_m3" src="images/milan/large/M3_medium.jpg" alt="M3" width="80%">
 
+<!-- text -->
 <section>
   <h2>M3</h2>
   <p>file.name07896785643eEtz</p>
 </section>
 </section>
 
+<!-- dynamic kpis -->
 <section>
 <table align="center" style="background-color:#FEFCFB">
   <tr>
@@ -62,17 +94,21 @@
 </table>
 </section>
 
+<!-- buffer -->
 <section><h2></h2></section>
 
+<!-- facebook comments -->
 <section>
   <button class="collapsible">Comment</button>
-  <div class="fb-comments" data-href="https://0point1km.guthub.io/site/" data-width="70%" data-numposts="5"></div>
+  <div class="fb-comments" data-href="http://www.0point1km.com" data-width="70%" data-numposts="5"></div>
 </section>
 
+<!-- footer menu -->
 <footer>
   <h3><a href="mailto:contact@0point1km.com?subject=What is this&body=Hi, what is this exactly? Thanks for any information.">Ask Us</a>  |  <a href="https://www.twitter.com">Ask Friends</a>  |  <a href="https://www.instagram.com" target="_blank">Contribute</a>  | <a href="milan.html">Explore</a></h3>
 </footer>
 
+<!-- comments collapsable button script-->
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -88,6 +124,41 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+</script>
+
+<!-- cookie consent decline script -->
+<script>
+onInitialise: function (status) {
+  var type = this.options.type;
+  var didConsent = this.hasConsented();
+  if (type == 'opt-in' && didConsent) {
+    // enable cookies
+  }
+  if (type == 'opt-out' && !didConsent) {
+    // disable cookies
+  }
+},
+
+onStatusChange: function(status, chosenBefore) {
+  var type = this.options.type;
+  var didConsent = this.hasConsented();
+  if (type == 'opt-in' && didConsent) {
+    // enable cookies
+  }
+  if (type == 'opt-out' && !didConsent) {
+    // disable cookies
+  }
+},
+
+onRevokeChoice: function() {
+  var type = this.options.type;
+  if (type == 'opt-in') {
+    // disable cookies
+  }
+  if (type == 'opt-out') {
+    // enable cookies
+  }
+},
 </script>
 
 </section>
