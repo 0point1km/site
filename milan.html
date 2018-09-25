@@ -86,10 +86,17 @@
 <div class="fb-comments" data-href="https://0point1km.guthub.io/site/" data-width="70%" data-numposts="5"></div>
 </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="js/jquery.rwdImageMaps.min.js"></script>
-  <script>$('img[usemap]').rwdImageMaps();
-});</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
 
 
 </body>
